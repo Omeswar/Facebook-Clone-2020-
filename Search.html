@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+ <head> 
+  <style>
+     body{
+    font:15px/1.3 'Open Sans', sans-serif;
+    color: #5e5b64;
+    text-align:;
+}
+/* Styles go here */*{
+    margin:0;
+    padding:0px 10px;;
+}
+.container-fluid{
+  background-color:#3b5999;
+  color:white;
+  width:100%;
+}
+.header {
+    width: 100%;
+    height:10%;
+    background: #3b5999;
+    color:white;
+    position: relative;
+    top: 20px;  
+    left: 0px;
+    z-index:999;
+    box-shadow: 0px px px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height: 5px;
+}
+.header .logo a{
+    color:#fff;
+}
+.header *[class*=col-]{
+    color:#fff;
+   
+}
+a, a:visited {
+    outline:none;
+    color:#389dc1;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+section, footer, header, aside, nav{
+    display: block;
+}
+
+/*-------------------------
+    The search input
+--------------------------*/
+.bar{
+    background-color:white;
+    
+    box-shadow: 0 1px 1px ;
+    border-radius: 0px;
+    width: 500px;
+    padding: 0px 20px;
+    margin: 5px auto 20px;
+    position:relative;
+}
+
+.bar input{
+    background:#fff no-repeat 13px 13px;
+    
+    border: none;
+    width: 100%;
+    line-height: 1px;
+    padding: 11px 0;
+
+    border-radius: 2px;
+    box-shadow: 0 2px 8px  inset;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    color: green;
+    font-weight: bold;
+   
+    text-indent: 0px;
+}
+
+ul{
+    list-style: none;
+    width: 428px;
+    margin: 0 auto;
+    
+    text-align: left;
+}
+
+ul li{
+    border-bottom: 1px solid ;
+    padding: 10px;
+    overflow: hidden;
+}
+
+
+
+ul li p{
+    margin-left: 75px;
+    font-weight: bold;
+    padding-top: 0px 14px;
+    text-align: left;
+    color:black;
+}  
+.copyright{
+  padding:800px 0px;
+}
+   </style> 
+  <link rel="stylesheet" href="style.css"> 
+  <script src="https://code.angularjs.org/1.2.13/angular.js"></script> 
+  <script src="app.js"></script> 
+ </head> 
+ <body> 
+    <div class="container-fluid"> 
+    <div class="col-sm-12">
+     <div class="logo"> 
+      <h1>Facebook</h1> 
+     </div> 
+    </div> 
+    </div></div>
+  <!-- Initialize a new AngularJS app and associate it
+        with a module named "instantSearch"--> 
+  <div ng-app="searchApp" ng-controller="searchController" style="width:500px"> 
+   <div> 
+   </div> 
+   <div style="margin:20px"> 
+   </div> 
+   <div class="bar"> 
+    <!-- Create a binding between the searchString model 
+                  and the text field --> 
+    <input type="text" ng-model="searchString" placeholder="Enter your search name here"> 
+   </div> 
+   <ul> 
+    <!-- Render a li element for every entry in the items array. Notice
+                   the custom search filter "searchFor". It takes the value of the
+                   searchString model as an argument.
+               --> 
+    <li ng-repeat="m in friends | searchFor:searchString"> <p>{{m.name}}</p> </li> 
+   </ul> 
+  </div> 
+  <script>
+     var app = angular.module("searchApp", []);
+
+// Create the search filter
+app.filter('searchFor', function(){
+    // All filters must return a function. The first parameter
+    // is the data that is to be filtered, and the second is an
+    // argument that may be passed with a colon (searchFor:searchString)
+    return function(dataArr, searchString){
+
+        if(!searchString){
+            return dataArr;
+        }
+        
+        var result = [];
+        searchString = searchString.toLowerCase();
+
+        // Using the forEach helper method to loop through the array
+        angular.forEach(dataArr, function(item){
+            if(item.name.toLowerCase().indexOf(searchString) !== -1){
+                result.push(item);
+            }
+        });
+        return result;
+    };
+});
+
+// The controller
+function searchController($scope){
+    // The data model. These items would normally be requested via AJAX,
+    // but are hardcoded here for simplicity. See the next example for
+    // tips on using AJAX.
+    $scope.friends = [
+        {name:"Mr.Shannu",joinYr:"2018"},
+        {name:"Vaishnavi Chaitanya",joinYr:"2010"},
+        {name:"Prabhas",joinYr:"2017"},
+        {name:"Heyy Siri",joinYr:"2017"},
+        {name:"Sheetal Gautam",joinYr:"2018"},
+        {name:"Sruthi",joinYr:"2019"},
+        {name:"Mahesh Babu",joinYr:"2017"},
+        {name:"Sampu",joinYr:"2015"},
+        {name:"Robert Downey Jr",joinYr:"2019"},
+        {name:"Virat Kohli",joinYr:"2012"},
+        {name:"AB De Villiers",joinYr:"2019"}
+        
+    ];}
+ </script> 
+ </body>
+ <div class="copyright">
+ &copy; Facebook 2020 by SaahoBadri
+ </div>
+</html>

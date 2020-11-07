@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+ <head> 
+  <title>JSON Data</title> 
+  <style>
+        th, td, p, input {
+            font:34px Apple Chancery, cursive;
+            color:;
+        }
+        table, th, td 
+        {
+            border: solid 1px #3b5999;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        input{
+          font:34px Chalkduster, fantasy;
+        }
+        th {
+            font-weight:bold;
+            color:green;
+        }
+        td{
+          color:black;
+          font: 34px Marker Felt, fantasy;
+        }
+        .btn{
+          color:black;
+          background:#12C7F5;
+          font-size:17px;
+          font-weight: bold;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <input class="btn" type="button" onclick="CreateTableFromJSON()" value="Show Payment History"> 
+  <p id="showData"></p> 
+  <script>
+    function CreateTableFromJSON() {
+        var myBooks = [
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+            },
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+            },
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            }
+        ]
+        
+        var col = [];
+        for (var i = 0; i < myBooks.length; i++) {
+            for (var key in myBooks[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+        var table = document.createElement("table");
+
+        var tr = table.insertRow(-1);                   
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th"); 
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+        
+        for (var i = 0; i < myBooks.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = myBooks[i][col[j]];
+            }
+        }
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+    }
+</script> 
+ </body>
+</html>

@@ -1,0 +1,575 @@
+<!doctype html>
+<html>
+ <head> 
+  <style>
+ .card{
+  display:inline-block;
+  padding:0px 40px ;
+  width:600px;
+  font-size: 18px;
+  
+}
+.heading{
+  color:green;
+  font-weight:bold;
+}
+.fieldset{
+  color:black;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.copyright{
+  font-size:20px;
+  padding: 30px 0px;
+  color:#3b5999;
+}
+
+.user{
+  color:black;
+  text-align:center;
+  font-weight:bold;
+  font-size:20px;
+  margin-top:30px;
+}
+.user1{
+  color:blue;
+  padding:0px 0px;
+  padding-top:20px;
+  margin-top:-20px;
+}
+.online{
+  color:#0DEF24;
+  margin-top:-10px;
+}
+
+
+/*breadcrumb start*/
+  
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+  position:relative;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+/*breadcrumb end*/
+
+.usercard{
+  font-size:18px;
+  font-weight:bold;
+  padding: 15px 230px;
+  background-color: #ffffff;
+  border: 2px solid #4CAF50;
+  position: ;
+  border: 3px solid gray;    
+
+  background-color: #D6E3E4 ;
+}
+.nav-link {
+    color: green;
+}
+
+ .header {
+    width: 100%;
+    background: #3b5999;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:999;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height: 0px;
+    text-align:left;
+}
+.header .logo a{
+    color:#fff;
+}
+.header {
+    padding:0px;
+    color:#fff;
+    text-align:right;
+}
+.header-menu{
+    list-style:none;
+    margin-top:-37px;  
+}
+.header-menu li{
+    display:inline-block;
+}
+.header-menu li a{
+    color:#fff;
+    background-color:;
+    padding:20px 20px;
+    font-size:20px;
+    display:inline-block;
+}
+.header-menu li a:hover{
+    background-color:rgba(0,0,0,0.2);
+}
+.no-shadow{
+    box-shadow:none;
+}
+.main{
+    background-image: none;
+    display:inline-block;
+}
+.main:after,.main:before{
+    clear:both;
+}
+.left-sidebar ul{
+    list-style:none;
+}
+.left-sidebar ul li{
+    display:block;
+    margin-bottom:0px;
+}
+.left-sidebar ul li a{
+    padding:30px 30px;
+    font-weight:bold;    
+}
+th, td,  input {
+            font:24px Apple Chancery, cursive;
+            color:;
+        }
+        table, th, td 
+        {
+            border: solid 1px #3b5999;
+            border-collapse: collapse ;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        input{
+          font:34px Chalkduster, fantasy;
+        }
+        th {
+            font-weight:bold;
+            color:green;
+        }
+        td{
+          color:black;
+          font: 34px Marker Felt, fantasy;
+        }
+        .btn1{
+          color:black;
+          background:#12C7F5;
+          font-size:17px;
+          font-weight: bold;
+        }
+  .btn{
+  color: white;
+  background-color: #00BFFF;
+  
+     </style>  
+ </head> 
+ <body>    
+  <div class="header no-shadow"> 
+   <div class="row"> 
+    <div class="col-sm-12"> 
+     <div class="logo"> 
+      <h1>Facebook</h1> 
+     </div> 
+    </div> 
+    <div class="col-sm-15"> 
+     <ul class="header-menu pull-right"> 
+      <li><a href="./privacy.html" class="active"></a></li> 
+      <li><a href="./login.html">Logout</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+  <h2>.</h2> 
+  <ul class="breadcrumb"> 
+   <li><a href="./Home.html">Home</a></li> 
+   <li><a href="./settings.html">Settings</a></li> 
+   <li><a href="./User Profile.html">Profile</a></li> 
+   <li>Privacy Settings</li> 
+  </ul> 
+  <div class="user-info"> 
+   <img class="img-profile img-circle img-responsive center-block" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" alt=""> 
+   <div class="user"> 
+    <p> Mr.HéártLádrón</p> 
+    <div class="user1"> 
+     <p>mrheartladron@gmail.com</p> 
+    </div> 
+    <div class="online"> 
+     <p>Last Online: 08 Nov,2020. 2:00AM</p> 
+    </div> 
+   </div> 
+   <ul class="meta list list-unstyled"> 
+   </ul> 
+  </div> 
+  <div class="usercard"> 
+   <div> 
+    <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active"> 
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-2"> 
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path> 
+      <circle cx="12" cy="7" r="4"></circle> 
+     </svg>Profile Information </a> 
+    <a href="#account" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded"> 
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings mr-2"> 
+      <circle cx="12" cy="12" r="3"></circle> 
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path> 
+     </svg>Account Settings </a> 
+    <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded"> 
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield mr-2"> 
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path> 
+     </svg>Security </a> 
+    <a href="#notification" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded"> 
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell mr-2"> 
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path> 
+      <path d="M13.73 21a2 2 0 0 1-3.46 0"></path> 
+     </svg>Notification </a> 
+    <a href="#billing" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded"> 
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card mr-2"> 
+      <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect> 
+      <line x1="1" y1="10" x2="23" y2="10"></line> 
+     </svg>Billing </a> 
+   </div> 
+  </div> 
+  <div class="card"> 
+   <div class="tab-pane active" id="profile"> 
+   </div> 
+   <div class="tab-pane active" id="profile"> 
+    <fieldset class="fieldset"> 
+     <div class="heading">
+       YOUR PROFILE INFORMATION 
+     </div> 
+     <hr> 
+     <form> 
+      <div class="form-group"> 
+       <label for="fullName">Full Name</label> 
+       <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp" placeholder="Enter your fullname" value="Mahesh babu"> 
+       <small id="fullNameHelp" class="form-text text-muted">Your name may appear around here where you are mentioned. You can change or remove it at any time.</small> 
+      </div> 
+      <div class="form-group"> 
+       <label for="bio">Your Bio</label> 
+       <textarea class="form-control autosize" id="bio" placeholder="Write something about you" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 62px;">A front-end developer that focuses mainly on user interface and friendliness of the website which helps people for better understanding.....</textarea> 
+      </div> 
+      <div class="form-group"> 
+       <label for="url">URL</label> 
+       <input type="text" class="form-control" id="url" placeholder="Enter your website address" value="www.mrheartladron/blogspot.com"> 
+      </div> 
+      <div class="form-group"> 
+       <label for="location">Location</label> 
+       <input type="text" class="form-control" id="location" placeholder="Enter your location" value="Mars,2426"> 
+      </div> 
+      <div class="form-group small text-muted">
+        All of the fields on this page are optional and can be deleted at any time, and by filling them out, you're giving us consent to share this data wherever your user profile appears. 
+      </div> 
+      <a href="./Edit Profile.html"><button type="button" class="btn btn-primary">Update Profile</button> </a>
+      <button type="reset" class="btn btn-light">Reset Changes</button> 
+     </form> 
+    </fieldset> 
+   </div> 
+   <div class="tab-pane" id="account"> 
+    <div class="heading">
+      ACCOUNT SETTINGS 
+    </div> 
+    <hr> 
+    <form> 
+     <div class="form-group"> 
+      <label for="username">Username</label> 
+      <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your username" value="SaahoBadri"> 
+      <small id="usernameHelp" class="form-text text-muted"> Your old username becomes available for anyone else to claim, After changing your username</small> 
+     </div> 
+     <hr> 
+     <div class="form-group"> 
+      <label> <label class="d-block text-danger">Delete Account</label> <p class="text-muted font-size-sm">Once you delete your account, there is no going back. Please make sure before doing it.</p> </label> 
+     </div> 
+     <button class="btn btn-danger" type="button">Delete Account</button> 
+    </form> 
+   </div> 
+   <div class="tab-pane" id="security"> 
+    <div class="heading">
+      SECURITY SETTINGS 
+    </div> 
+    <hr> 
+    <form> 
+     <div class="form-group"> 
+      <label class="d-block">Change Password</label> 
+      <input type="text" class="form-control" placeholder="Enter your old password"> 
+      <input type="text" class="form-control mt-1" placeholder="New password"> 
+      <input type="text" class="form-control mt-1" placeholder="Confirm new password"> 
+     </div> 
+     <a href="./Forgot Password.html"><button class="btn btn-danger" type="button"> Forgot Password</button></a> 
+    </form> 
+    <hr> 
+    <form> 
+     <div class="form-group"> 
+      <label class="d-block">Two Factor Authentication</label> 
+      <button class="btn btn-info" type="button">Enable two-factor authentication</button> 
+      <p class="small text-muted mt-2">Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in.</p> 
+     </div> 
+    </form> 
+    <hr> 
+    <form> 
+     <div class="form-group mb-0"> 
+      <label class="d-block">Sessions</label> 
+      <p class="font-size-sm text-secondary">This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.</p> 
+      <ul class="list-group list-group-sm"> 
+       <li class="list-group-item has-icon"> 
+        <div> 
+         <h6 class="mb-0">Mars 2020.2024.3005.91</h6> 
+         <small class="text-muted">Your current session seen in Mars</small> 
+        </div> <button class="btn btn-light btn-sm ml-auto" type="button">More info</button> </li> 
+      </ul> 
+     </div> 
+    </form> 
+   </div> 
+   <div class="tab-pane" id="notification"> 
+    <div class="heading">
+      NOTIFICATION SETTINGS 
+    </div> 
+    <hr> 
+    <form> 
+     <div class="form-group"> 
+      <label class="d-block mb-0">Security Alerts</label> 
+      <div class="small text-muted mb-3">
+        Receive security alert notifications via email 
+      </div> 
+      <div class="custom-control custom-checkbox"> 
+       <input type="checkbox" class="custom-control-input" id="customCheck1" checked> 
+       <label class="custom-control-label" for="customCheck1">Email each time a vulnerability is found</label> 
+      </div> 
+      <div class="custom-control custom-checkbox"> 
+       <input type="checkbox" class="custom-control-input" id="customCheck2" checked> 
+       <label class="custom-control-label" for="customCheck2">Email a digest summary of vulnerability</label> 
+      </div> 
+     </div> 
+     <div class="form-group mb-0"> 
+      <label class="d-block">SMS Notifications</label> 
+      <ul class="list-group list-group-sm"> 
+       <li class="list-group-item has-icon"> Comments 
+        <div class="custom-control custom-control-nolabel custom-switch ml-auto"> 
+         <input type="checkbox" class="custom-control-input" id="customSwitch1" checked> 
+         <label class="custom-control-label" for="customSwitch1"></label> 
+        </div> </li> 
+       <li class="list-group-item has-icon"> Updates From People 
+        <div class="custom-control custom-control-nolabel custom-switch ml-auto"> 
+         <input type="checkbox" class="custom-control-input" id="customSwitch2"> 
+         <label class="custom-control-label" for="customSwitch2"></label> 
+        </div> </li> 
+       <li class="list-group-item has-icon"> Reminders 
+        <div class="custom-control custom-control-nolabel custom-switch ml-auto"> 
+         <input type="checkbox" class="custom-control-input" id="customSwitch3" checked> 
+         <label class="custom-control-label" for="customSwitch3"></label> 
+        </div> </li> 
+       <li class="list-group-item has-icon"> Events 
+        <div class="custom-control custom-control-nolabel custom-switch ml-auto"> 
+         <input type="checkbox" class="custom-control-input" id="customSwitch4" checked> 
+         <label class="custom-control-label" for="customSwitch4"></label> 
+        </div> </li> 
+       <li class="list-group-item has-icon"> Pages You Follow 
+        <div class="custom-control custom-control-nolabel custom-switch ml-auto"> 
+         <input type="checkbox" class="custom-control-input" id="customSwitch5"> 
+         <label class="custom-control-label" for="customSwitch5"></label> 
+        </div> </li> 
+      </ul> 
+     </div> 
+    </form> 
+   </div> 
+   <div class="tab-pane" id="billing"> 
+    <div class="heading">
+      BILLING SETTINGS 
+    </div> 
+    <hr> 
+    <form> 
+     <div class="form-group"> 
+      <label class="d-block mb-0">Payment Method</label> 
+      <div> 
+       <img src="https://www.uxfordev.com/demo/1.0.6/assets/images/payment-icon-set/icons/maestro-curved-32px.png" alt="Maestro"> 
+      </div> 
+      <button class="btn btn-info" type="button">Add Payment Method</button> 
+     </div> 
+     <div class="form-group mb-0"> 
+      <div class="small text-muted mb-3">
+        You have added a payment method 
+      </div> 
+      <label class="d-block">Payment History:</label> 
+      <input class="btn1" type="button" onclick="CreateTableFromJSON()" value="Show Payment History"> 
+      <p id="showData"></p> 
+      <script>
+    function CreateTableFromJSON() {
+        var myBooks = [
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+            },
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+            },
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+            {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            },
+              {
+                "Transaction Date": "08/11/2020",
+                "Narration": "BUPI/0014314382203/08-11-2020UPI",
+                "Debit Amount": "698.30",
+                "Credit Amount": "125.60",
+                "Remaining Balance":"10000"
+               
+            }
+        ]
+        
+        var col = [];
+        for (var i = 0; i < myBooks.length; i++) {
+            for (var key in myBooks[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+        var table = document.createElement("table");
+
+        var tr = table.insertRow(-1);                   
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th"); 
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+        
+        for (var i = 0; i < myBooks.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = myBooks[i][col[j]];
+            }
+        }
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+    }
+</script> 
+      <div class="border border-gray-500 bg-gray-200 p-3 text-center font-size-sm"> 
+      </div> 
+     </div> 
+    </form> 
+   </div> 
+   <div class="copyright">
+     © Facebook 2020 by SaahoBadri 
+   </div> 
+  </div> 
+ </body>
+</html>

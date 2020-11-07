@@ -1,0 +1,342 @@
+<html>
+ <head> 
+  <style>
+     body{
+    margin-top:120px;
+    background:#E4F0F0;   
+}
+.remainders{
+  color:green;
+  text-align:center;
+  margin-top:-40px;
+}
+.header {
+    width: 100%;
+    background: #3b5999;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:999;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height: 0px;
+    text-align:left;
+}
+.header .logo a{
+    color:#fff;
+}
+.header *[class*=col-]{
+    padding:0px;
+    color:#fff;
+    text-align:right;
+}
+.header-menu{
+    list-style:none;
+    margin-top:-27px;
+   
+}
+.header-menu li{
+    display:inline-block;
+}
+.header-menu li a{
+    color:#fff;
+    background-color:;
+    padding:10px 5px;
+    display:inline-block;
+}
+.header-menu li a:hover{
+    background-color:rgba(0,0,0,0.2);
+}
+.no-shadow{
+    box-shadow:none;
+}
+.main{
+    background-image: none;
+    display:inline-block;
+}
+.main:after,.main:before{
+    clear:both;
+}
+.left-sidebar ul{
+    list-style:none;
+}
+.left-sidebar ul li{
+    display:block;.    margin-bottom:0px;
+}
+.left-sidebar ul li a{
+    padding:10px 20px;     font-weight:bold;    
+}
+/*breadcrumb start*/  
+ul.breadcrumb {
+  padding: 10px 26px;     top:-55px;     color: green;
+  list-style: none;     background-color: #C0C0C0;   
+  position:relative;
+}
+ul.breadcrumb li {
+  display: inline;    font-size: 20px;
+  font-weight:bold;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;.   color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color:#0275d8;    font-weight:bold;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;     font-weight:bold;
+  text-decoration: underline;
+}
+/*breadcrumb end*/
+.timeline-centered {
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-centered:before,
+.timeline-centered:after {
+  content: " ";
+  display: table;
+}
+
+.timeline-centered:after {
+  clear: both;
+}
+
+.timeline-centered:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 5px;
+  background: gray;
+  left: 50%;
+  top: 20px;
+  bottom: 20px;
+  margin-left: -4px;
+}
+.timeline-centered .timeline-entry {
+  position: relative;
+  width: 50%;     float: right;
+  margin-bottom: 70px;    clear: both;
+}
+.timeline-centered .timeline-entry:after {
+  clear: both;
+}
+.timeline-centered .timeline-entry.begin {
+  margin-bottom: 0;
+}
+.timeline-centered .timeline-entry.left-aligned {
+  float: left;
+}
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner {
+  margin-left: 0;
+  margin-right: -40px;
+}
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label:after {
+  left: auto;
+  right: 0px;
+  margin-left: 0;
+  margin-right: -9px;
+  transform: rotate(180deg);
+}
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-time {
+  left: auto;
+  right: -105px;
+  text-align: left;
+}
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-icon {
+  float: right;
+}
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
+  margin-left: -20px;
+  margin-right: 85px;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner {
+  position: relative;
+  margin-left: -31px;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner:before,
+.timeline-centered .timeline-entry .timeline-entry-inner:after {
+  content: " ";
+  display: table;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner:after {
+  clear: both;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time {
+  position: absolute;
+  left: -115px;
+  text-align: right;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span {
+  display: block;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:last-child {
+  font-size: 15px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
+  background:#DACBE8 ;
+  color: black;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  border: 10px solid gray;
+  line-height: 45px;
+  font-size: 25px;
+  float: left;
+}
+
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-green {
+  background-color: #488c6c;      color: #fff;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-orange {
+  background-color: #e9662c;     color: #fff;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-violet {
+  background-color: #481C81;      color: #fff;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
+  position: relative;     background: #481C81;    padding: 1.7em;
+  color: #ffffff;     margin-left: 85px;    border-radius: 0px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label.bg-green {
+  background:#488c6c;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label.bg-green:after {
+  border-color: transparent #488c6c transparent transparent;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label.bg-green .timeline-title,
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label.bg-green p {
+  color: #ffffff;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label.bg-orange {
+  background: #e9662c;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label.bg-orange:after {
+  border-color: transparent #e9662c transparent transparent;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label.bg-orange .timeline-title,
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label.bg-orange p {
+  color: #ffffff;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
+  content: '';
+  display: block;     position: absolute;
+  width: 0px;      height: 00px;    border-style: solid;
+  border-width: 9px 9px 9px 0;
+  border-color: transparent #481C81 transparent transparent;
+  left: 0px;     top: 20px;     margin-left: -9px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-title,
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p {
+  color: #ffffff;
+  margin: 0;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p + p {
+  margin-top: 15px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-title {
+  margin-bottom: 40px;     font-family: 'Oswald';
+  font-weight: bold;
+}
+.copyright {
+  padding: 850px 00px;
+  font-weight:bold;
+  }
+   </style> 
+ </head> 
+ <body> 
+  <div class="header no-shadow"> 
+   <div class="row"> 
+    <div class="col-sm-12"> 
+     <div class="logo"> 
+      <h1>Facebook</h1> 
+     </div> 
+    </div> 
+    <div class="col-sm-15"> 
+     <ul class="header-menu pull-right"> 
+      <li><a href="./login.html">Logout📧</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <ul class="breadcrumb"> 
+   <li><a href="./dashbord.html">Home</a></li> 
+   <li><a href="./Notifications.html">Notifications</a></li> 
+   <li> Remainders</li> 
+  </ul> 
+  <div class="remainders"> 
+   <h1>Upcoming Remainders</h1> 
+  </div> 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> 
+  <div class="col-md-9"> 
+   <div class="timeline-centered timeline-sm"> 
+    <article class="timeline-entry"> 
+     <div class="timeline-entry-inner"> 
+      <time datetime="2014-01-10T03:45" class="timeline-time"><span>12:00 AM</span><span>Nov,22nd</span></time> 
+      <div class="timeline-icon bg-violet"> 
+       <i class="fa fa-birthday-cake"></i> 
+       <i class="fas fa-align-center"></i> 
+      </div> 
+      <div class="timeline-label"> 
+       <h4 class="timeline-title">Vaishnavi Chaitanya's Birthday</h4> 
+       <p>Your friend's birthday is about to come...</p> 
+       <p>Do wish and celebrate with her...💞 </p> 
+      </div> 
+     </div> 
+    </article> 
+    <article class="timeline-entry left-aligned"> 
+     <div class="timeline-entry-inner"> 
+      <time class="timeline-time"><span>9:00AM</span><span>Nov,27th</span></time> 
+      <div class="timeline-icon bg-green"> 
+       <i class="fa fa-group"></i> 
+       <i class="fas fa-align-center"></i> 
+      </div> 
+      <div class="timeline-label bg-green"> 
+       <h4 class="timeline-title">Meeting</h4> 
+       <p>You have meeting regarding the Final submission of Project..</p> 
+       <p>Don't forget to attend it..🤗</p> 
+      </div> 
+     </div> 
+    </article> 
+    <article class="timeline-entry"> 
+     <div class="timeline-entry-inner"> 
+      <time datetime="2014-01-09T13:22" class="timeline-time"><span>9:20 AM</span><span>14/12/2020</span></time> 
+      <div class="timeline-icon bg-orange"> 
+       <i class="fa fa-newspaper-o"></i> 
+       <i class="fas fa-align-center"></i> 
+      </div> 
+      <div class="timeline-label bg-orange"> 
+       <h4 class="timeline-title">Exam</h4> 
+       <p> You have your IAS exam to attend at 9:30...</p> 
+       <p>Please make sure you attend to it....🙋‍♂️ </p> 
+      </div> 
+     </div> 
+     <div class="timeline-entry-inner"> 
+      <div class="timeline-icon"> 
+       <i class="fa fa-plus-square"></i> 
+       <i class="fas fa-align-center"></i> 
+      </div> 
+     </div> 
+    </article> 
+   </div> 
+  </div> 
+  <div class="copyright"> 
+   <p>© Facebook 2020 by SaahoBadri</p> 
+  </div> 
+ </body>
+</html>

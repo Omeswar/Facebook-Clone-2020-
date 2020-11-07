@@ -1,0 +1,421 @@
+<!doctype html>
+<html>
+ <head> 
+  <title>Facebook - The Social Media Network</title> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="assets/css/style.css"> 
+  <link rel="stylesheet" href="assets/css/admin.css"> 
+  <style>
+   
+  .header-menu{
+    list-style:none;
+    margin-top:-47px;
+}
+.header-menu li{
+    display:inline-block;
+}
+.header-menu li a{
+    color:#fff;
+    background-color:rgba(0,0,0,0.1);
+    padding:10px 20px;
+    display:inline-block;
+}
+.header-menu li a:hover{
+    background-color:rgba(0,0,0,0.2);
+}
+.no-shadow{
+    box-shadow:none;
+}
+.main{
+    background-image: none;
+    display:inline-block;
+}
+.main:after,.main:before{
+    clear:both;
+}
+.left-sidebar ul{
+    list-style:none;
+}
+.left-sidebar ul li{
+    display:block;
+    margin-bottom:5px;
+}
+.left-sidebar ul li a{
+    padding:10px 20px;
+    font-weight:bold;
+}
+
+/*Post*/
+.post{
+    display:block;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 2px;
+    margin-bottom:10px;
+}
+.profile-picture{
+    background-image:;
+    width:50px;
+    height:50px;
+}
+.post-heading{
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.post-heading,.post-body{
+    padding:10px 5px;
+}
+.post-body div{
+    white-space: pre-wrap;
+}
+.post-user-name{
+    font-weight:bold;
+    font-family:cursive;
+    font-size:15px;
+}
+.post-action{
+    border-top:1px solid rgba(0,0,0,0.1);
+}
+.post-action-menu{
+    list-style: none;
+    padding:0px;
+}
+.post-action-menu li,
+.post-action-menu li a{
+    display:inline-block;
+}
+.post-action-menu li a {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.post-action-menu li:not(.pull-right) a:hover{
+    color:#3b5999;
+}
+
+/*Chat sidebar*/
+.chat-user {
+    position:relative;     padding: 5px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);    background: rgba(255,0,0,0.06);
+}
+.chat-user a{
+    line-height:48px;    cursor: default;     color: #3b5999;
+}
+.chat-user:after {
+    content: "";    width: 3px;    height: 3px;    position: absolute;
+    right: 5px;    top: 40%;    padding: 4px;
+    background-color:green;    border-radius: 50%;
+}
+.chat-user.online a{
+    color: # 3b5999;    cursor:pointer;
+}
+.chat-user.online{    background: rgba(45, 154, 64, 0.06); }
+.chat-user.online:hover{
+    cursor:pointer;    background: rgba(45, 154, 64, 0.2);
+}
+.chat-user.online:after{        background: # 3b5999;}
+.chat-user img{
+    width:30px;   height:30px;
+}
+.table{
+    width:100%;    border:0px;
+}
+.table tr td{
+padding: 10px 20px;  margin:0px;
+}
+.table-striped tr{   background:rgba(0,0,0,0.05); }
+.table-striped tr:hover{    background:rgba(0,0,0,0.1);}
+.table-striped tr:nth-child(2n+1){
+    background:rgba(0,0,0,0.1);}
+.table-striped tr:nth-child(2n+1):hover{
+    background:rgba(0,0,0,0.2);}
+
+
+body{font-family: Arial, Verdana, Sans-serif;font-size:14px;padding-top:50px;}
+.container-fluid {
+    padding-right: 15px;    padding-left: 15px;
+    margin-right: auto;    margin-left: auto;
+    max-width:1200px; }
+.row{
+    margin:0px -15px;}
+.row:after, .row:before {
+    display: table;   content: " ";}
+.row:after {
+    clear: both;
+}
+a{
+    text-decoration:none;    color:# 3b5999;
+}
+.pull-right{
+    float:right;}
+.pull-left{
+    float:left;}
+.img-responsive{
+    max-width:100%;    height:auto;}
+    
+
+p{margin-bottom:5px;}
+.copyright{
+  color:black;  font-weight:bold;   font-size:15px;
+  padding: 300px 0px;
+  position:fixed;
+}
+
+/*Columns*/
+*[class*=col-]{float:left;padding:0px 15px;width:100%;min-height:1px;}
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+  .col-sm-12 {    width: 100%; }
+  .col-sm-11 {   width: 91.66666667%; }
+  .col-sm-10 {    width: 83.33333333%; }
+  .col-sm-9  {   width: 75%;  }
+  .col-sm-8 {   width: 66.66666667%;  }
+  .col-sm-7 {   width: 58.33333333%;  }
+  .col-sm-6 {    width: 50%;  }
+  .col-sm-5 {   width: 41.66666667%;  }
+  .col-sm-4 {    width: 33.33333333%;  }
+  .col-sm-3 {    width: 25%;  }
+  .col-sm-2 {    width: 16.66666667%;  }
+  .col-sm-1 {    width: 8.33333333%;  }
+}
+/* Main */
+.main{
+    min-height:100%;    padding: 30px 0px;    background: fixed center;
+}
+
+/* Header */
+.header {
+    width: 100%;   background: #3b5999;
+    position: fixed;   top: 0px;   left: 0px;   z-index:999;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height:48px;
+}
+.header .logo a{
+    color:#fff;
+}
+.header *[class*=col-]{    padding:5px 10px;    color:#fff; }
+/*Text*/
+
+.text-mute{color:  #008080;}
+
+/* Backgrounds */
+.gradient{
+    background: linear-gradient(white, #D3D8E8);
+}
+
+     
+        
+ </style> 
+ </head> 
+ <body> 
+  <div class="header no-shadow"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="col-sm-4"> 
+      <div class="logo"> 
+       <h1>Facebook</h1> 
+      </div> 
+     </div> 
+     <div class="col-sm-12"> 
+      <ul class="header-menu pull-right"> 
+       <li><a href="./News Feed.html" class="active">News Feed</a></li> 
+       <li><a href="./Time Line.html" class="active">Time Line</a></li> 
+       <li><a href="./Friend Requests.html" class="active">Requests🕺</a></li> 
+       <li><a href="./Messenger.html" class="active">Messages💌</a></li> 
+       <li><a href="./Notification.html" class="active">Notifications🎶</a></li> 
+       <li><a href="./settings.html" class="active">Settings🎛️</a></li> 
+       <li><a href="./login.html">Logout📧</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="main"> 
+   <div class="container-fluid"> 
+    <div class="col-sm-6 left-sidebar"> 
+     <ul> 
+      <li><a href="" class="active"></a></li> 
+      <li><a href="" class="active"></a></li> 
+      <li><a href=""></a></li> 
+     </ul> 
+    </div> 
+    <div class="col-sm-12"> 
+     <div class="post col-sm-12" id="post_1"> 
+      <div class="row post-heading"> 
+       <div class="col-sm-12"> 
+        <a href="profile.html"> <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="profile-picture pull-left"> &nbsp; <span class="post-user-name">Vaishnavi Chaitanya</span><br> &nbsp; <small class="post-date text-mute">31th October, 2020 2:49AM</small> </a> 
+       </div> 
+      </div> 
+      <div class="row post-body"> 
+       <div class="col-sm-12">
+         New York Comedy Festival New York City, USA 1-6 November Trevor Noah, Patton Oswalt, Tracy Morgan, Dane Cook – the list of hilarious luminaries in action at NYC’s upcoming funny fest goes on. Grab some tickets, and get ready to bust a gut. 
+       </div> 
+      </div> 
+      <div class="row post-action"> 
+       <ul class="post-action-menu"> 
+        <li><a href="javascript:void(0);" class="text-mute" onclick="like(1);">Like</a></li> 
+        <li><a href="javascript:void(0);" class="text-mute" onclick="share(1);">Share</a></li> 
+        <li><a href="javascript:void(0);" class="text-mute" onclick="comment(1);">Comment</a></li> 
+        <li class="pull-right"><a href="#" class="text-mute"><span id="post_like_count_1">21122</span> Likes</a></li> 
+        <li class="pull-right"><a href="#" class="text-mute"><span id="post_comment_count_1">2172</span> Comments</a></li> 
+        <li class="pull-right"><a href="#" class="text-mute"><span id="post_share_count_1">211</span> Shares</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="post col-sm-12" id="post_2"> 
+     <div class="row post-heading"> 
+      <div class="col-sm-12"> 
+       <a href="profile.html"> <img src="assets/imgs/3.jpg" class="profile-picture pull-left"> &nbsp; <span class="post-user-name">Shanmukh Jaswant</span><br> &nbsp; <small class="post-date text-mute">31th October, 2020 2:47PM</small> </a> 
+      </div> 
+     </div> 
+     <div class="row post-body"> 
+      <div class="col-sm-12">
+        Meet Deepthi Sunaina and Shanmukh Jaswanth, who are the trending names among the youth of the Telugu States. 
+      </div> 
+     </div> 
+     <div class="row post-action"> 
+      <ul class="post-action-menu"> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="like(2);">Like</a></li> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="share(2);">Share</a></li> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="comment(2);">Comment</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_like_count_2">15217</span> Likes</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_comment_count_2">1732</span> Comments</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_share_count_2">189</span> Shares</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="post col-sm-12" id="post_3"> 
+     <div class="row post-heading"> 
+      <div class="col-sm-12"> 
+       <a href="profile.html"> <img src="assets/imgs/5.jpg" class="profile-picture pull-left"> &nbsp; <span class="post-user-name">Miss Siri</span><br> &nbsp; <small class="post-date text-mute">31th October, 2020 2:38AM</small> </a> 
+      </div> 
+     </div> 
+     <div class="row post-body"> 
+      <div class="col-sm-12">
+        Preeti Zinta &amp; Virat Kohli Share A Moment After RCB Finally Wins FIRST IPL Match 
+      </div> 
+     </div> 
+     <div class="row post-action"> 
+      <ul class="post-action-menu"> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="like(3);">Like</a></li> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="share(3);">Share</a></li> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="comment(3);">Comment</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_like_count_3">292</span> Likes</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_comment_count_3">22</span> Comments</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_share_count_3">20</span> Shares</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="post col-sm-12" id="post_4"> 
+     <div class="row post-heading"> 
+      <div class="col-sm-12"> 
+       <a href="profile.html"> <img src="assets/imgs/4.jpg" class="profile-picture pull-left"> &nbsp; <span class="post-user-name">Sheetal Gautam</span><br> &nbsp; <small class="post-date text-mute">31th October, 2020 2:21AM</small> </a> 
+      </div> 
+     </div> 
+     <div class="row post-body"> 
+      <div class="col-sm-12">
+        2020 movie release dates: every major film still coming out this year. 
+       <p>Check here https://www.google.com/amp/s/www.gamesradar.com/amp/movie-release-dates/ </p> 
+      </div> 
+     </div> 
+     <div class="row post-action"> 
+      <ul class="post-action-menu"> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="like(4);">Like</a></li> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="share(4);">Share</a></li> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="comment(4);">Comment</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_like_count_4">12342</span> Likes</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_comment_count_4">1172</span> Comments</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_share_count_4">256</span> Shares</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <div class="post col-sm-12" id="post_5"> 
+     <div class="row post-heading"> 
+      <div class="col-sm-12"> 
+       <a href="profile.html"> <img src="assets/imgs/1.jpg" class="profile-picture pull-left"> &nbsp; <span class="post-user-name">Somepalli Naga Brahma Chaitanya</span><br> &nbsp; <small class="post-date text-mute">31th October, 2020 2:17AM</small> </a> 
+      </div> 
+     </div> 
+     <div class="row post-body"> 
+      <div class="col-sm-12">
+        Katherine Langford of 13 Reasons Why fame recently revealed that she had been busy with the shooting of her upcoming project.. 
+      </div> 
+     </div> 
+     <div class="row post-action"> 
+      <ul class="post-action-menu"> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="like(5);">Like</a></li> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="share(5);">Share</a></li> 
+       <li><a href="javascript:void(0);" class="text-mute" onclick="comment(5);">Comment</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_like_count_5">267</span> Likes</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_comment_count_5">22</span> Comments</a></li> 
+       <li class="pull-right"><a href="#" class="text-mute"><span id="post_share_count_5">60</span> Shares</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="col-sm-3 chat-users"> 
+    <div class="row"> 
+     <h3>Chat</h3> 
+    </div> 
+    <div class="row"> 
+     <div class="col-sm-12 chat-user online"> 
+      <a href="#"> <img src="assets/imgs/1.jpg" class="pull-left"> &nbsp; Somepalli Naga Brahma Chaitanya </a> 
+     </div> 
+     <div class="col-sm-12 chat-user online"> 
+      <a href="#"> <img src="assets/imgs/2.jpg" class="pull-left"> &nbsp; Vaishanvi Chaitanya </a> 
+     </div> 
+     <div class="col-sm-12 chat-user online"> 
+      <a href="#"> <img src="assets/imgs/3.jpg" class="pull-left"> &nbsp; Shanmukh Jaswant </a> 
+     </div> 
+     <div class="col-sm-12 chat-user"> 
+      <a href="#"> <img src="assets/imgs/4.jpg" class="pull-left"> &nbsp; Sheetal Gautam </a> 
+     </div> 
+     <div class="col-sm-12 chat-user online"> 
+      <a href="#"> <img src="assets/imgs/5.jpg" class="pull-left"> &nbsp; Miss Siri </a> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="footer no-shadow"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="copyright">
+       © Facebook 2020 by SaahoBadri. 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script>
+            function like(id){
+                var elem = document.getElementById("post_like_count_"+id);
+                var count = parseInt(elem.innerHTML);
+                elem.innerHTML = count+1;
+                highlight(elem);
+            }
+            function share(id){
+                var elem = document.getElementById("post_share_count_"+id);
+                var count = parseInt(elem.innerHTML);
+                elem.innerHTML = count+1;
+                highlight(elem);
+            }
+            function comment(id){
+                var elem = document.getElementById("post_comment_count_"+id);
+                var count = parseInt(elem.innerHTML);
+                elem.innerHTML = count+1;
+                highlight(elem);
+            }
+            function highlight(elem){
+                elem.style.color = "red";
+                elem.parentElement.parentElement.style.transform="scale(1.5)";
+                setTimeout(function(){
+                    elem.style.color="";
+                    elem.parentElement.parentElement.style.transform="scale(1)";
+                },300);
+            }
+        </script> 
+ </body>
+</html>

@@ -1,0 +1,443 @@
+<!doctype html>
+<html>
+ <head> 
+  <style>
+        body{  
+margin-top:0px;
+background:#3b5999;
+}
+.header {
+    width: 100%;
+    background: #3b5999;
+    position: fixed;
+    top: 3px;
+    left: 0px;
+    z-index:999;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height: 5px;
+}
+.header .logo a{
+    color:#fff;
+}
+.header *[class*=col-]{
+    padding:0px 0px;
+    color:#fff;
+}
+.header-menu{
+    list-style:none;
+    margin-top:-27px;
+}
+.header-menu li{
+    display:inline-block;
+}
+.header-menu li a{
+    color:#fff;
+    background-color:rgba(0,0,0,0.1);
+    padding:10px 20px;
+    display:inline-block;
+}
+.header-menu li a:hover{
+    background-color:rgba(0,0,0,0.2);
+}
+.no-shadow{
+    box-shadow:none;
+}
+.main{
+    background-image: none;
+    display:inline-block;
+}
+.main:after,.main:before{
+    clear:both;
+}
+.left-sidebar ul{
+    list-style:none;
+}
+.left-sidebar ul li{
+    display:block;
+    margin-bottom:5px;
+}
+.left-sidebar ul li a{
+    padding:10px 20px;
+    font-weight:bold;
+}
+
+/*breadcrumb start*/
+  
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+  position:relative;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 20px;
+  font-weight:bold;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  font-weight:bold;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  font-weight:bold;
+  text-decoration: underline;
+}
+/*breadcrumb end*/
+
+/* USER PROFILE */
+#user-profile h2 {
+    padding-right: 15px;
+    margin-top: 60px;
+}
+#user-profile .profile-status {
+  font-size: 0.75em;
+  padding-left: 12px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  color: #8dc859;
+}
+
+#user-profile .profile-img {
+  border: 1px solid #e1e1e1;
+  padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#user-profile .profile-details ul > li > i {
+  padding-top: 2px;
+}
+#user-profile .profile-details ul > li > span {
+  color: #34d1be;
+}
+
+#user-profile .profile-header {
+  position: relative;
+}
+#user-profile .profile-header > h3 {
+  margin-top: 10px
+}
+#user-profile .profile-header .edit-profile {
+  margin-top: -6px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#user-profile .profile-tabs {
+  margin-top: 30px;
+}
+#user-profile .profile-user-info {
+  padding-bottom: 20px;
+}
+#user-profile .profile-user-info .profile-user-details {
+  position: relative;
+  padding: 4px 0;
+}
+#user-profile .profile-user-info .profile-user-details .profile-user-details-label {
+  width: 110px;
+  float: left;
+  bottom: 0;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 110px;
+  padding-top: 4px;
+}
+#user-profile .profile-user-info .profile-user-details .profile-user-details-value {
+  margin-left: 120px;
+  color: green;
+  
+}
+#user-profile .profile-social li {
+  padding: 4px 0;
+  color:  ;
+}
+#user-profile .profile-social li > i {
+  padding-top: 6px;
+  color: ;
+}
+
+
+.main-box {
+    background: #FFFFFF;
+    -webkit-box-shadow: 1px 1px 2px 0 #CCCCCC;
+    -moz-box-shadow: 1px 1px 2px 0 #CCCCCC;
+    -o-box-shadow: 1px 1px 2px 0 #CCCCCC;
+    -ms-box-shadow: 1px 1px 2px 0 #CCCCCC;
+    box-shadow: 1px 1px 2px 0 #CCCCCC;
+    margin-bottom: 16px;
+    padding: 20px;
+}
+.main-box h2 {
+    margin: 0 0 15px -20px;
+    padding: 5px 0 5px 20px;
+    border-left: 10px solid #c2c2c2; /*7e8c8d*/
+}
+.btn-link {
+  border: none;
+}
+.btn-primary {
+  background-color: #ced0d9;
+ 
+}
+
+.btn-success {
+  background-color: #ced0d9;
+}
+a {
+    color: #3b5999;
+  outline: none !important;
+}
+a:hover,
+a:focus {
+  color: green;
+}
+
+.label.label-success {
+    background: #43d39e;
+}
+.label {
+    font-weight: 400;
+    padding: 4px 8px;
+    font-size: 11px;
+    display: inline-block;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25em;
+}
+.fa{
+  color:#A20E30;
+}
+.check{
+  color:#0A39BA;
+  font-size:15px;
+  font-weight:bold;
+}
+  </style> 
+ </head> 
+ <body> 
+  <div class="header no-shadow"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="col-sm-12"> 
+      <div class="logo"> 
+       <h1>Facebook</h1> 
+      </div> 
+     </div> 
+     <div class="col-sm-15"> 
+      <ul class="header-menu pull-right"> 
+       <li><a href="./settings.html" class="active">Settings🎛️</a></li> 
+       <li><a href="./Nees Feed.html" class="active">News Feed</a></li> 
+       <li><a href="./Friend Requests.html" class="active">Friend Requests</a></li> 
+       <li><a href="./login.html">Logout📧</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> 
+  <div class="container bootstrap snippets"> 
+   <div class="row" id="user-profile"> 
+    <div class="col-lg-3 col-md-4 col-sm-4"> 
+     <div class="main-box clearfix"> 
+      <h2>Mr.TéçhLádrón </h2> 
+      <div class="profile-status"> 
+       <i class="fa fa-check-circle"></i> Online 
+      </div> 
+      <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" alt="" class="profile-img img-responsive center-block"> 
+      <p>Member since 07 Nov 2020 </p> 
+      <div class="btn "> 
+       <button type="button" onclick="document.getElementById('demo').innerHTML = Date()"> Click me to display Date and Time.</button> 
+       <p id="demo"></p> 
+      </div> 
+      <div class="profile-label"> 
+      </div> 
+      <div class="profile-details"> 
+       <ul class="fa-ul"> 
+        <li><i class="fa-li fa fa-truck"></i>Videos: <span>16</span></li> 
+        <li><i class="fa-li fa fa-comment"></i>Posts: <span>72</span></li> 
+        <li><i class="fa-li fa fa-tasks"></i>Comments: <span>1024</span></li> 
+        <li><i class="fa-li fa fa-users"></i>Friends: <span>644</span></li> 
+       </ul> 
+      </div> 
+      <div class="profile-message-btn center-block text-center"> 
+       <a href="#" class="btn btn-success"> <i class="fa fa-envelope"></i> Send message </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-lg-9 col-md-8 col-sm-8"> 
+     <div class="main-box clearfix"> 
+      <div class="profile-header"> 
+       <h3><span>User info</span></h3> 
+       <a href="./Edit Profile.html" class="btn btn-primary edit-profile"> <i class="fa fa-pencil-square fa-lg"></i> Edit Profile </a> 
+      </div> 
+      <div class="row profile-user-info"> 
+       <div class="col-sm-8"> 
+        <div class="profile-user-details clearfix"> 
+         <div class="profile-user-details-label">
+           User Name 
+         </div> 
+         <div class="profile-user-details-value">
+           SaahoBadri™ 
+         </div> 
+        </div> 
+        <div class="profile-user-details clearfix"> 
+         <div class="profile-user-details-label">
+           First Name 
+         </div> 
+         <div class="profile-user-details-value">
+           Mr.Téçh 
+         </div> 
+        </div> 
+        <div class="profile-user-details clearfix"> 
+         <div class="profile-user-details-label">
+           Last Name 
+         </div> 
+         <div class="profile-user-details-value">
+           Ladron 
+         </div> 
+        </div> 
+        <div class="profile-user-details clearfix"> 
+         <div class="profile-user-details-label">
+           Address 
+         </div> 
+         <div class="profile-user-details-value">
+           Door No:24, Assguard 
+          <br> Planet, Mars, 2026 
+         </div> 
+        </div> 
+        <div class="profile-user-details clearfix"> 
+         <div class="profile-user-details-label">
+           Email 
+         </div> 
+         <div class="profile-user-details-value">
+           mrtechladron@gmail.com 
+         </div> 
+        </div> 
+        <div class="profile-user-details clearfix"> 
+         <div class="profile-user-details-label">
+           Phone number 
+         </div> 
+         <div class="profile-user-details-value">
+           +00 143 143 143 143 
+         </div> 
+        </div> 
+       </div> 
+       <div class="profile-user-details clearfix"> 
+        <div class="profile-user-details-label">
+          Education Details 
+        </div> 
+        <div class="profile-user-details-value">
+          Completed B.Tech at Lovely Professional University. 
+         <p> Jalandhar</p> 
+         <p>Punjab</p> 
+        </div> 
+       </div> 
+       <div class="profile-user-details clearfix"> 
+        <div class="profile-user-details-label">
+          About 
+        </div> 
+        <div class="profile-user-details-value">
+          I know I am different but I am perfect... 
+         <p>Don't ever try to change my fucking Attitude ✊. </p> 
+        </div> 
+       </div> 
+       <div class="profile-user-details clearfix"> 
+        <div class="profile-user-details-label">
+          Hobbies 
+        </div> 
+        <div class="profile-user-details-value">
+          1) Listening to music... 
+         <p> 2) Watching webseries.</p> 
+         <p>3) Playing Cricket</p> 
+        </div> 
+       </div> 
+       <div class="profile-user-details clearfix"> 
+        <div class="profile-user-details-label">
+          Skills 
+        </div> 
+        <div class="profile-user-details-value">
+          1) Have some Technical Skills like Good at Front End Web..... 
+         <p>2) Have Communication Skills like mentoring</p> 
+         <p> 3) Some Creativity Skills</p> 
+         <a href="#" class="label label-success mb-2">HTML</a> 
+         <a href="#" class="label label-success mb-2">CSS</a> 
+         <a href="#" class="label label-success mb-2">Bootstrap</a> 
+         <a href="#" class="label label-success mb-2">Javascript</a> 
+         <a href="#" class="label label-success mb-2">Angular</a> 
+         <a href="#" class="label label-success mb-2">Python</a> 
+        </div> 
+       </div> 
+       <div class="check"> 
+        <hr class="border-light m-0"> 
+        <div class="table-responsive"> 
+         <table class="table card-table m-0"> 
+          <tbody> 
+           <tr> 
+            <th>Permissions</th> 
+            <th>Read</th> 
+            <th>comment</th> 
+            <th>Share</th> 
+            <th>Like</th> 
+           </tr> 
+           <tr> 
+            <td>Friends</td> 
+            <td><span class="fa fa-check text-primary"></span></td> 
+            <td><span class="fa fa-check text-primary"></span></td> 
+            <td><span class="fa fa-check text-primary"></span></td> 
+            <td><span class="fa fa-check text-primary"></span></td> 
+           </tr> 
+           <tr> 
+            <td>Everyone</td> 
+            <td><span class="fa fa-check text-primary"></span></td> 
+            <td><span class="fa fa-check text-light"></span></td> 
+            <td><span class="fa fa-check text-light"></span></td> 
+            <td><span class="fa fa-times text-light"></span></td> 
+           </tr> 
+           <tr> 
+            <td>Someone</td> 
+            <td><span class="fa fa-check text-light"></span></td> 
+            <td><span class="fa fa-check text-light"></span></td> 
+            <td><span class="fa fa-times text-light"></span></td> 
+            <td><span class="fa fa-check text-light"></span></td> 
+           </tr> 
+          </tbody> 
+         </table> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="profile-user-details clearfix"> 
+       <div class="profile-user-details-label">
+         Social Media Links 
+       </div> 
+       <div class="col-sm-4 profile-social"> 
+        <ul class="fa-ul"> 
+         <li><i class="fa-li fa fa-twitter-square"></i><a href="#">@mrtechladron</a></li> 
+         <li><i class="fa-li fa fa-linkedin-square"></i><a href="#">Mr.TéçhLádrón </a></li> 
+         <li><i class="fa-li fa fa-facebook-square"></i><a href="#">Mr.TéçhLádrón </a></li> 
+         <li><i class="fa-li fa fa-skype"></i><a href="#">Iron Man-4</a></li> 
+         <li><i class="fa-li fa fa-instagram"></i><a href="#">Avenger_IronMan</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <p>© Facebook 2020 by SaahoBadri</p> 
+   </div> 
+  </div> 
+ </body>
+</html>

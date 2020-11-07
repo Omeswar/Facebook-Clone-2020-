@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+ <head> 
+  <style>
+          
+ /* Header */
+.header {
+    width: 100%;
+    background:#3b5999;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:999;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height:48px;
+}
+.header .logo a{
+    color:#fff;
+}
+.header *[class*=col-]{
+    padding:5px 10px;
+    color:#fff;
+}    
+
+/* Main */
+.main{
+    min-height:100%;     padding: 80px 0px;
+    background-image: fixed center;
+}
+.header li
+{
+ list-style-type:none;    float:left;     text-align:left;     color:white;
+}
+.header form
+{
+ margin-top:15px;
+ float:right;
+}
+.header form li
+{
+ font-size:15px;    margin-left:15px;
+}
+.header form li a
+{
+ color: #A9BCF5;   text-decoration:none;
+}
+.header form input[type="text"]
+{
+ margin-top:3px;   margin-bottom:3px;   width:150px;
+ border:1px solid #08298A;   height:25px;   padding-left:3px;
+}
+.header form input[type="password"]
+{
+ margin-top:3px;   margin-bottom:3px;    width:150px;   border:1px solid #08298A;
+ height:25px;     padding-left:3px;
+}
+.header form input[type="submit"]
+{
+ height:25px;      margin-top:20px;     background-color:#084B8A;
+ color:white;       border:1px solid #08298A;
+}
+
+/*Buttons*/
+.btn {
+    background: rgba(0,0,0,0.4);    color: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;     outline: none;    padding: 5px 10px;
+    font-size: 14px;
+    /* line-height: 28px; */
+    border-radius: 2px;     font-weight: bold;     text-align: center;
+}
+.btn:active{
+    box-shadow:none;
+}
+.btn-primary {
+    background: #3b5999;
+}
+.btn-primary:hover {
+    background: #3b5999;
+}
+.btn-success {
+    background: #3b5999;
+}
+.btn-success:hover{
+    background: #3b5999;
+}
+
+*{
+    margin:0px;        box-sizing:border-box;
+   transition: 0.2s all ease-in-o ut;
+   -webkit-transition: 0.2s all ease-in-out;
+    -o-transition: 0.2s all ease-in-out;
+    -moz-transition: 0.2s all ease-in-out;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;     box-sizing: border-box;
+}
+body{font-family: Arial, Verdana, Sans-serif;font-size:14px;padding-top:50px;}
+
+.container-fluid {
+    padding-right: 15px;    padding-left: 15px;    margin-right: auto;
+    margin-left: auto;    max-width:1200px;
+}
+.row{
+    margin:0px -15px;
+}
+.row:after, .row:before {
+    display: table;    content: " ";
+}
+.row:after {
+    clear: both;
+}
+a{
+    text-decoration:none;    color:# 3b5999;
+}
+.pull-right{
+    float:right;
+}
+.pull-left{
+    float:left;
+}
+.img-responsive{
+    max-width:100%;    height:auto;
+}
+p{margin-bottom:5px;}
+h1,.h1{
+    font-size:35px;    line-height:40px;
+}
+h2,.h2{
+    font-size:30px;    line-height:350px;
+}
+h3,.h3{
+    font-size:25px;    line-height:30px;
+}
+h4,.h4{
+    font-size:20px;    line-height:25px;
+}
+h5,.h5{
+    font-size:15px;    line-height:20px;
+}
+h6,.h6{
+    font-size:10px;   line-height:15px;
+}
+
+/*Columns*/
+*[class*=col-]{float:left;padding:0px 15px;width:100%;min-height:1px;}
+@media (min-width: 768px) {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+  .col-sm-11 {
+    width: 91.66666667%;
+  }
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-8 {
+    width: 66.66666667%;
+  }
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-2 {
+    width: 16.66666667%;
+  }
+  .col-sm-1 { 
+      width: 8.33333333%; }
+}
+
+/* Form */
+form{
+    padding:-20px 0px;
+}
+input,select,textarea,button{
+    padding:5px 10px;
+    border:1px solid rgba(0,0,0,0.2);   border-radius:2px;   outline: none;
+}
+input:focus,select:focus,textarea:focus,button:focus{
+    border:1px solid rgba(0,0,0,0.5);
+    outline:none;
+}
+.input-lg{
+    font-size:20px;
+    padding:10px 20px;
+}
+.inline-form input{
+    display:inline-block;
+}
+.form-group{
+    display:inline-block; width:100%;   margin-bottom:10px;
+}
+
+/*Footer*/
+    #footer_wrapper
+{
+ width:100%;  clear:both;  float:left; padding:0px 40px;
+ margin-top:-75px; min-width:1010px; background-color:white; text-align:left;
+}
+#footer1
+{
+ width:980px;   margin:0px auto;   padding:0px;
+ border-bottom:1px solid #E6E6E6;   height:50px; line-height:50px;
+ font-size:15px; color:#848484; 
+}
+#footer1 a
+{
+ color:#365899;   display:inline;   margin-left:10px;
+ text-decoration:none;
+}
+#footer1 a:hover
+{
+ text-decoration:underline;
+}
+#footer2
+{
+ width:980px;   margin:0px auto;   padding:0px;
+ font-size:15px;   color:#848484;  
+}
+#footer2 a
+{
+ color:#365899;   display:inline-block;   margin:5px;  margin-left:0px;
+ min-width:80px;   text-decoration:none;
+}
+#footer2 a:hover
+{
+ text-decoration:underline;
+}  
+
+.signup-form{
+  background: rgba(255,255,255,1);  padding: 10px 20px;
+  border-radius: 2px;  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
+ color:black;   font-size:17px;
+ }
+.copyright{
+ font-size:15px;  color:black; font-weight:bold;
+ position:fixed;  padding:890px 00px;
+  }
+ body{
+ background-color:#DCDCDC;
+ }
+ 
+ 
+</style> 
+  <title>Facebook - The Social Media Network</title> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="assets/css/style.css"> 
+ </head> 
+ <body> 
+  <div class="header"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="col-sm-4"> 
+      <div class="logo"> 
+       <h1>Facebook</h1> 
+      </div> 
+     </div> 
+     <div id="header">        
+        <form action="javascript:void(0)" method="POST" onsubmit="window.location.href='Home.html';return false;">
+       <li>Email or Phone<br><input type="text" placeholder="Email or Phone" name="email"></li> 
+       <li>Password<br><input type="password" placeholder="Enter your password" name="password"><br><a href="./Forgot Password.html">Forgotten account?</a></li> 
+       <input type="submit" value="Login" class="btn btn-primary"/>
+  </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="main"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="pull-left text-center col-sm-7"> 
+      <div style="display:none"> 
+      </div> 
+     </div> 
+     <div class="pull-right col-sm-5"> 
+      <div class="signup-form"> 
+       <h1>Create a new account</h1> 
+       <p class="h3">It's free and always helps you waste to your time and others also🤗🤗 .</p> 
+       <form action="javascript:void(0);"> 
+        <div class="form-group"> 
+         <input type="text" placeholder="First Name" required name="fname" class="input-lg col-sm-12"> 
+        </div> 
+        <div class="form-group"> 
+         <input type="text" placeholder="Last Name" required name="lname" class="input-lg col-sm-12"> 
+        </div> 
+        <div class="form-group"> 
+         <input type="mobile no" placeholder="Mobile Number" required name="mobile no" class="input-lg col-sm-12"> 
+        </div> 
+        <div class="form-group"> 
+         <input type="email" placeholder="Email Address" required name="email" class="input-lg col-sm-12"> 
+        </div> 
+        <div class="form-group"> 
+         <input type="password" placeholder="Enter Password" required name="pwd" class="input-lg col-sm-12"> 
+        </div> 
+        <div class="form-group"> 
+         <input type="password" placeholder="Confirm Password" required name="pwd" class="input-lg col-sm-12"> 
+        </div> 
+        <div class="form-group"> 
+         <p style="font-size:20px">Birthday </p> 
+         <select class="col-sm-4 input-lg" name="date"> <option value="0" selected>Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option> </select> 
+         <select class="col-sm-4 input-lg" name="month"><option value="0" selected>Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sept</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select> 
+         <select class="col-sm-4 input-lg" name="year"><option value="0" selected="1">Year</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option><option value="1911">1911</option><option value="1910">1910</option><option value="1909">1909</option><option value="1908">1908</option><option value="1907">1907</option><option value="1906">1906</option><option value="1905">1905</option></select> 
+         <a href="">Why do I need to provide my date of birth?</a> 
+        </div> 
+        <div class="form-group"> 
+         <label for="sex_male" class="input-lg"> <input type="radio" name="sex" value="male" id="sex_male"> Male🏋️‍♂️ </label> 
+         <label for="sex_female" class="input-lg"> <input type="radio" name="sex" value="female" id="sex_female"> Female 🏋️‍♀️ </label> 
+        </div> 
+        <div class="form-group"> 
+         <small id="terms">By clicking Create an account, you agree to our <a href="">Terms</a> and that <br>you have read our <a href="">Data Policy</a>, including our <a href="">Cookie Use</a>You may receive SMS message notifications from Facebook and can opt out at any time..</small> 
+        </div> 
+        <div class="form-group"> 
+         <input type="submit" value="Create Account" class="btn btn-success input-lg"> 
+         <div id="create_page"> 
+          <a href="">Create a Page</a> for a celebrity, band or business. 
+         </div> 
+        </div> 
+       </form> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="footer_wrapper"> 
+   <div id="footer1">
+     English (UK) 
+    <a href="">हिन्दी</a> 
+    <a href="">ਪੰਜਾਬੀ</a> 
+    <a href=""> اردو</a> 
+    <a href="">தமிழ்</a> 
+    <a href="">বাংলা</a> 
+    <a href="">मराठी</a> 
+    <a href="">తెలుగు</a> 
+    <a href="">ગુજરાતી</a> 
+    <a href="">ಕನ್ನಡ</a> 
+    <a href="">മലയാളം</a> 
+   </div> 
+   <div id="footer2"> 
+    <a href="">Sign Up</a> 
+    <a href="">Log In</a> 
+    <a href="">Messenger</a> 
+    <a href="./Contact Us.html">Contact Us</a> 
+    <a href="">Mobile</a> 
+    <a href="">Find Friends</a> 
+    <a href="">Badges</a> 
+    <a href="">People</a> 
+    <a href="">Pages</a> 
+    <a href="">Places</a> 
+    <a href="">Games</a> 
+    <a href="">Locations</a> 
+    <a href="">Celebrities</a> 
+    <a href="">Groups</a> 
+    <a href="">Moments</a> 
+    <a href="">About</a> 
+    <a href="">Create Advert</a> 
+    <a href="">Create Page</a> 
+    <a href="">Developers</a> 
+    <a href="">Careers</a> 
+    <a href="./Privacy Policy.html">Privacy</a> 
+    <a href="">Cookies</a> 
+    <a href="">Ads</a> 
+    <a href="./Terms and Conditions.html">Terms</a> 
+    <a href="">Help</a> 
+   </div> 
+  </div> 
+  <div class="footer"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="col-sm-12"> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="copyright" < div> 
+   <p> © Facebook 2020 by SaahoBadri. </p> 
+  </div> 
+ </body>
+</html>

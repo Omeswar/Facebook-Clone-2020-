@@ -1,0 +1,170 @@
+<html>
+ <head> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+  <style>
+    
+     .header {
+    width: 100%;
+    background: #3b5999;
+    position: fixed;
+    top: -0px;
+  
+    left: 0px;
+    z-index:999;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height: 0px;
+    text-align:left;
+}
+.header .logo a{
+    color:#fff;
+}
+.header {
+    padding:0px;
+    color:#fff;
+    text-align:right;
+    top: 0px;
+    font-size:30px;
+}
+.header-menu{
+    list-style:none;
+    margin-top:-57px;  
+}
+.header-menu li{
+    display:inline-block;
+}
+.header-menu li a{
+    color:#fff;
+    background-color:;
+    padding:20px 20px;
+    font-size:20px;
+    display:inline-block;
+}
+.header-menu li a:hover{
+    background-color:rgba(0,0,0,0.2);
+}
+.no-shadow{
+    box-shadow:none;
+}
+.main{
+    background-image: none;
+    display:inline-block;
+}
+.main:after,.main:before{
+    clear:both;
+}
+.left-sidebar ul{
+    list-style:none;
+}
+.left-sidebar ul li{
+    display:block;
+    margin-bottom:0px;
+}
+.left-sidebar ul li a{
+    padding:30px 30px;
+    font-weight:bold;    
+    font-size:30px;
+}
+    
+     * {
+   box-sizing: border-box;
+}
+ html {
+   background: #DCDCDC;
+}
+ body {
+   background: #DCDCDC;
+   margin: 0;
+   padding: 0;
+   font-family: 'Lato', sans-serif;
+}
+ .login-form-wrap {
+   background:#ffffff ;
+     border: 3px solid #2d416d;
+   box-shadow: 0 1px #5670a4 inset, 0 0 10px 5px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   width: 500px;
+   height: 500px;
+   margin: 150px auto;
+   padding:50px 30px 0 30px ;
+   text-align: center;
+}
+ .login-form-wrap h1 {
+   margin: 0 0 50px 0;
+   padding: 0;
+   font-size: 36px;
+   color: black;
+}
+ .login-form-wrap h5 {
+   margin-top: 40px;
+}
+ .login-form-wrap h5 > a {
+   font-size: 20px;
+   font-weight:bold;
+   color: black;
+   text-decoration: none;
+   
+}
+ .login-form input[type="submit"]:hover {
+   background: #ddd;
+}
+ .login-form input[type="submit"]:active {
+   padding-top: 9px;
+   padding-bottom: 7px;
+   background: #c9c9c9;
+}  
+.btn{
+  color:#3b5999;
+  background-color: ;
+  font weight:bold;
+  font-size:20px;
+}
+.login-form-wrap{
+  color:black;
+  font-size:15px;
+  font-weight:bold;
+  padding:10px 10px;
+}
+   </style> 
+ </head> 
+ <body> 
+  <div class="header no-shadow"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="col-sm-12"> 
+      <div class="logo"> 
+       <h1>Facebook</h1> 
+      </div> 
+     </div> 
+     <div class="col-sm-15"> 
+      <ul class="header-menu pull-right"> 
+       <li><a href="./privacy.html" class="active"></a></li> 
+       <li><a href="./index.html">SignUp</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <section class="login-form-wrap"> 
+   <h1>Log into Facebook</h1> 
+   <form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate> 
+    <p>Email Address<br> <input type="email" name="email" ng-model="email" required> <span style="color:red" ng-show="myForm.email.$dirty &amp;&amp; myForm.email.$invalid"> <span ng-show="myForm.email.$error.required">Email is required.</span> <br ng-show="myForm.email.$error.email">Invalid email address.<br> </span> </p> 
+    <p> Password<br> <input type="text" name="user" ng-model="user" required> <span style="color:red" ng-show="myForm.user.$dirty &amp;&amp; myForm.user.$invalid"> <br ng-show="myForm.user.$error.required">Username is required.<br> </span> </p> 
+    <div class="btn"> 
+     <button onclick="window.location='Home.html'" class="btn btn-danger">Sign in</button> 
+    </div> 
+   </form> 
+   <h5><a href="#">Don't have an account 😑 Click here</a> </h5> 
+   <h5><a href="#">Forgot password ?</a></h5> 
+  </section> 
+  <script>
+    
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+  $scope.user = 'John Doe';
+  $scope.email = 'john.doe@gmail.com';
+});
+</script> 
+ </body>
+</html>

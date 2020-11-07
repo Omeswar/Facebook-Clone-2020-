@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+ <head> 
+  <style>
+     body {
+    background:#3b5999;
+}
+ /* Header */
+.header {
+    width: 100%;
+    background:#3b5999;
+    position:relative ;
+    top: -30px;
+    bottom:-10px;
+    left: 0px;
+    z-index:999;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height:48px;
+}
+.header .logo a{
+    color:#fff;
+}
+.header *[class*=col-]{
+    padding:5px 10px;
+    color:#fff;
+}
+
+/*breadcrumb start*/
+  
+ul.breadcrumb {
+  padding: 10px 26px;
+  top:-20px;
+  color: green;
+  list-style: none;
+  background-color: #C0C0C0;
+  position:relative;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 20px;
+  font-weight:bold;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color:#0275d8;
+  font-weight:bold;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  font-weight:bold;
+  text-decoration: underline;
+}
+/*breadcrumb end*/
+.card.card-white {
+    background-color: white;
+    border: 5px solid transparent;
+    border-radius: 10px;
+      padding: 25px;
+}
+.grid-margin {
+    margin-bottom: 1.8rem;
+   margin-top: -1.5rem;
+}
+
+.timeline-options {
+   overflow: hidden;
+    font-size:15px;
+    font-weight:bold;
+     padding: 10px 0 10px 0;
+}
+
+.timeline-options a {
+    display: block;
+    margin-right: 20px;
+    float: left;
+    color: #2b2b2b;
+    text-decoration: none;
+}
+.timeline-options a:hover {
+    color: #5369f8;;
+}
+.timeline-comment {
+    overflow: hidden;
+    margin-bottom: 0px;
+    width: 100%;
+    border-bottom: 3px solid #f1f1f1;
+    padding-bottom: 25px;
+}
+
+.timeline-comment .timeline-comment-header {
+    overflow: hidden;
+}
+
+.timeline-comment .timeline-comment-header img {
+    width: 30px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.timeline-comment .timeline-comment-header small {
+    font-weight: normal;
+    color: green;
+}
+.timeline-comment p.timeline-comment-text {
+    display: block;
+    color: black;
+    font-size: 17px;
+    
+    padding-left: 40px;
+}
+
+.post-options a {
+    display: block;
+    margin-top: 5px;
+    margin-right: 30px;
+    float: left;
+    color: blue;
+    text-decoration: none;
+    font-size: 20px !important;
+}
+.post-options a:hover {
+    color: #5369f8;
+}
+.online {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #ccc;
+}
+.online.on {
+    background: green;
+}
+.online.off {
+    background: red;
+}
+.team .team-member img {
+    width: 40px;
+    float: left;
+    border-radius: 50%;
+    margin: 0 5px 0 5px;
+}
+.team .team-member {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+    float: left;
+    position: relative;
+}
+.team .team-member .online {
+    top: 5px;
+    right: 5px;
+}
+.copyright{
+  color:white;
+  position:relative;
+  font-size:17px;
+}  
+.card-title{
+  color: blue;
+}
+.timeline-item-post{
+  color:black;
+  font-size:20px;
+  font-weight:bold;
+}
+.names{
+  color:green;
+  font-size:20px;
+  font-weight:bold;
+  
+}
+.names1{
+  color:#762CAE;
+  font-size:20px;
+  font-weight:bold;
+}
+.btn{
+  color:white;
+  float:right;
+  background-color: #3b5999;
+  font-size:15px;
+  font-weight:bold;  
+}
+.btn1{
+  color:white;
+  background-color: #3b5999;
+  font-size:15px;
+  font-weight:bold;
+   </style> 
+ </head> 
+ <body> 
+  <div class="header"> 
+   <div class="container-fluid"> 
+    <div class="row"> 
+     <div class="col-sm-4"> 
+      <div class="logo"> 
+       <h1>Facebook</h1> 
+       <ul class="breadcrumb"> 
+        <li><a href="./dashbord.html">Home</a></li> 
+        <li><a href="./Notifications.html">Notifications</a></li> 
+        <li> Comments</li> 
+       </ul> 
+      </div> 
+     </div> 
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+     <div class="col-lg-7 col-xl-6"> 
+      <div class="card card-white grid-margin"> 
+       <div class="card-body"> 
+        <div class="post"> 
+         <textarea rows="4" cols="120" placeholder="Post Something here..."></textarea> 
+         <div class="post-options"> 
+          <a href="#"><i class="fa fa-camera"></i></a> 
+          <a href="#"><i class="fa fa-video-camera"></i></a> 
+          <a href="#"><i class="fa fa-music"></i></a> 
+          <p id="demo"></p> 
+          <button class="btn" type="button" onclick="myFunction()">Post</button> 
+          <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Posted.";
+}
+</script> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="profile-timeline"> 
+      <ul class="list-unstyled"> 
+       <div class="timeline-item"> 
+        <div class="card card-white grid-margin"> 
+         <div class="card-body"> 
+          <div class="timeline-item-header"> 
+           <img src="https://i.ibb.co/myVMv28/avatar8edit.jpg" alt=""> 
+           <div class="names"> 
+            <div>
+              Mr.Shannu 
+             <span>posted a status</span> 
+            </div> 
+            <small>2 hours ago</small> 
+           </div> 
+          </div> 
+          <div class="timeline-item-post"> 
+           <p>Software Developer-10 is going to release on 26th October,2020 at 6:00PM......✊</p> 
+           <p> Don't forget to watch. Thank you💞</p> 
+           <div class="timeline-options"> 
+            <a href="#"><i class="fa fa-thumbs-up"></i> Like (105)</a> 
+            <a href="#"><i class="fa fa-comment"></i> Comment (24)</a> 
+            <a href="#"><i class="fa fa-share"></i> Share (86)</a> 
+           </div> 
+           <div class="timeline-comment"> 
+            <div class="timeline-comment-header"> 
+             <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt=""> 
+             <div class="names1"> 
+              <p>Vaishnavi Chaitanya <small>1 hour ago</small></p> 
+             </div> 
+            </div> 
+            <p class="timeline-comment-text">There is no end for True love. It is endless...... .</p> 
+           </div> 
+           <div class="timeline-comment"> 
+            <div class="timeline-comment-header"> 
+             <img src="https://i.ibb.co/GdFxwFK/avatar4edit.jpg" alt=""> 
+             <div class="names1"> 
+              <p>Heyy Siri <small>2 hours ago</small></p> 
+             </div> 
+            </div> 
+            <p class="timeline-comment-text">Big fannn Mr.Shannu.....🤗</p> 
+            <p class="timeline-comment-text">Waiting for that episode Mr.Shannu.....</p> 
+           </div> 
+           <textarea rows="4" cols="108" placeholder="Reply here..."></textarea> 
+           <button class="btn1">Send</button> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="timeline-item"> 
+        <div class="card card-white grid-margin"> 
+         <div class="card-body"> 
+          <div class="timeline-item-header"> 
+           <img src="https://i.ibb.co/2SsPGmX/avatar5edit.jpg" alt=""> 
+           <div class="names"> 
+            <p>Somepalli Naga Brahma Chaitanya <span> uploaded a photo</span></p> 
+            <small>4 hours ago</small> 
+           </div> 
+          </div> 
+          <div class="timeline-item-post"> 
+           <p>The deliciousness of this flavour is incredible....</p> 
+           <p>😍 Chicken Biryani 😍</p> 
+           <img src="img/post-img02.jpg" alt=""> 
+           <div class="timeline-options"> 
+            <a href="#"><i class="fa fa-thumbs-up"></i> Like (82)</a> 
+            <a href="#"><i class="fa fa-comment"></i> Comment (17)</a> 
+            <a href="#"><i class="fa fa-share"></i> Share (39)</a> 
+           </div> 
+           <div class="timeline-comment"> 
+            <div class="timeline-comment-header"> 
+             <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-1.jpg" alt=""> 
+             <div class="names1"> 
+              <p>Chandu Sai <small>1 hour ago</small></p> 
+             </div> 
+            </div> 
+            <p class="timeline-comment-text">Karuvu padinodilaaga undav kadha ra kukka🤭.</p> 
+            <p class="timeline-comment-text">Waste-fellow</p> 
+           </div> 
+           <textarea rows="4" cols="108" placeholder="Reply here..."></textarea> 
+           <button class="btn1">Send</button> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </ul> 
+     </div> 
+     <div class="col-lg-12 col-xl-3"> 
+      <div class="card card-white grid-margin"> 
+       <div class="card-heading clearfix"> 
+        <h4 class="card-title">Suggestions</h4> 
+       </div> 
+       <div class="card-body"> 
+        <div class="team"> 
+         <div class="team-member"> 
+          <div class="online on"></div> 
+          <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-2.jpg" alt=""> 
+         </div> 
+         <div class="team-member"> 
+          <div class="online on"></div> 
+          <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg" alt=""> 
+         </div> 
+         <div class="team-member"> 
+          <div class="online off"></div> 
+          <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-1.jpg" alt=""> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <!-- end page main wrapper --> 
+      <div class="copyright"> 
+       <p>© Facebook 2020 by SaahoBadri</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+ </body>
+</html>

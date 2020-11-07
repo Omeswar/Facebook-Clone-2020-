@@ -1,0 +1,621 @@
+<html>
+ <head> 
+  <style>
+     .header {
+    width: 100%;
+    background: #3b5999;
+    position: fixed;
+    top: -5px;  
+    left: 0px;
+    z-index:999;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.header .logo h1{
+    line-height: 5px;
+}
+.header .logo a{
+    color:#fff;
+}
+.header *[class*=col-]{
+    color:#fff;
+}
+/*breadcrumb start*/
+  
+ul.breadcrumb {
+  padding: 10px 6px;
+  list-style: none;
+  margin-top:45px;
+  margin-bottom:-100px;
+  background-color: #eee;
+  position:relative;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 20px;
+  font-weight:bold;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  font-weight:bold;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  font-weight:bold;
+  text-decoration: underline;
+}
+/*breadcrumb end*/
+.text-center{
+  padding:30px 0px;
+}
+.container{max-width:1170px;   margin:auto;}
+img{ max-width:100%; padding:0px 10px;}
+.inbox_people {
+  background: #f8f8f8 none repeat scroll 0 0;     float: left;
+  overflow: hidden;     width: 40%; 
+  height:;  border-right:1px solid #c4c4c4;
+}
+.inbox_msg {
+  border: 1px solid #c4c4c4;     clear: both;
+  overflow: hidden;
+}
+.top_spac{ margin: 20px 0 0;}
+
+.recent_heading {float: left; width:40%;}
+.srch_bar {
+  display: inline-block;     text-align: right;
+  width: 60%; padding:
+}
+.headind_srch{ padding:10px 29px 10px 20px; overflow:hidden; border-bottom:1px solid #c4c4c4;}
+
+.recent_heading h4 {
+  color: #05728f;     font-size: 21px;
+  margin: auto;
+}
+.srch_bar input{ border:1px solid #cdcdcd; border-width:0 0 1px 0; width:80%; padding:2px 0 4px 6px; background:none;}
+.srch_bar .input-group-addon button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;     padding: 0;
+  color: #707070;     font-size: 18px;
+}
+.srch_bar .input-group-addon { margin: 0 0 0 -27px;}
+
+.chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
+.chat_ib h5 span{ font-size:13px; float:right;}
+.chat_ib p{ font-size:14px; color:#989898; margin:auto}
+.chat_img {
+  float: left;      width: 11%;
+}
+.chat_ib {
+  float: left;     padding: 0 0 0 15px;
+  width: 88%;
+}
+.card{
+  color:green;   margin-top: -25px;
+  font-size:25px;
+}
+.card1{
+  color:brown;     margin-top: -40px;
+  font-size:15px;
+}
+.chat_people{ overflow:hidden; clear:both;}
+.chat_list {
+  border-bottom: 1px solid #c4c4c4;     margin: 0;
+  padding: 18px 16px 10px;
+}
+.inbox_chat { height: 1650px; overflow-y: scroll;}
+.active_chat{ background:#ebebeb;}
+.incoming_msg_img {
+  display: inline-block;     width: 6%;
+}
+.received_msg {
+  display: inline-block;     padding: 0 0 0 10px;
+  vertical-align: top;      width: 92%;
+ }
+ .received_withd_msg p {
+  background: #ebebeb none repeat scroll 0 0;    border-radius: 3px;
+  color: #646464;    font-size: 14px;
+  margin: 0;     padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.time_date {
+  color: #747474;     display: block;
+  font-size: 12px;     margin: 8px 0 0;
+}
+.received_withd_msg { width: 57%;}
+.mesgs {
+  float: topright;    padding: 30px 15px 0px 25px;
+  width: 90%;
+}
+ .sent_msg p {
+  background: #05728f none repeat scroll 0 0;
+  border-radius: 3px;     font-size: 14px;
+  margin: 0; color:#fff;     padding: 5px 10px 5px 12px;
+  width:100%;
+}
+.outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
+.sent_msg {
+  float: right;     width: 46%;
+}
+.input_msg_write input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border:  medium none;     color: #4c4c4c;
+  padding:0px 20px;     font-size: 15px;
+  min-height: 48px;     width: 40%;
+}
+.type_msg {border-top: px solid #c4c4c4;position: relative;}
+.msg_send_btn {
+  background: #05728f none repeat scroll 0 0;
+  border: medium none;     border-radius: 50%;
+  color: #fff;     cursor: pointer;
+  font-size: 17px;     height: 33px;
+  position: absolute ;     right: 100px;
+  top: 10px;     width: 33px;
+}
+.messaging { padding: 0 0 50px 0;}
+.msg_history {
+  height: 1616px;    overflow-y: auto;
+}
+.copyright{
+  color:#3b5999;     font-weight:bold;
+  font-size:17px;     padding:15px 0px;
+}  
+   </style> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet"> 
+ </head> 
+ <body> 
+  <div class="header no-shadow"> 
+   <div class="container-fluid"> 
+    <div class="col-sm-12"> 
+     <div class="logo"> 
+      <h1>Facebook</h1> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <ul class="breadcrumb"> 
+   <li><a href="./Home.html">Home</a></li> 
+   <li> Messenger</li> 
+  </ul> 
+  <div class="container"> 
+   <h3 class=" text-center"></h3> 
+   <div class="messaging"> 
+    <div class="inbox_msg"> 
+     <div class="inbox_people"> 
+      <div class="headind_srch"> 
+       <div class="recent_heading"> 
+        <h4>Recent</h4> 
+       </div> 
+       <div class="srch_bar"> 
+        <div class="stylish-input-group"> 
+         <input type="text" class="search-bar" placeholder="Search"> 
+         <span class="input-group-addon"> <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button> </span> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="inbox_chat"> 
+       <div class="chat_list active_chat"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Vaishnavi Chaitanya <span class="chat_date">Nov 08</span></h5> 
+          <p>Will you come to my home to talk with our parents about us...?</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/8NfM2XP/avatar6edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Mr.shannu<span class="chat_date">Nov 08</span></h5> 
+          <p>I am Currently busy with new series of Software developer.Hope it will complete soon.I will let you know about it.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/Fw47JQb/avatar7edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Heyy Siri <span class="chat_date">Nov 08</span></h5> 
+          <p>I do have 300K+ subscribers in youtube channel but not as much as Shanmukh Jaswant.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/SwnqqYY/avatar2edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Don Pruthvi <span class="chat_date">Nov 08</span></h5> 
+          <p>Thanks alot for your support that came for Software Developer Season-1. Very glad with your response.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/XLzh8zH/avatar3edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Harika <span class="chat_date">Nov 08</span></h5> 
+          <p>Mr.Shannu is a talented person .Iam very happy working with him.We became very close.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/myVMv28/avatar8edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Virat Kohli <span class="chat_date">Nov 08</span></h5> 
+          <p>Very happy that our team came to playoffs..Hope we will get IPL cup in the finals.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/GdFxwFK/avatar4edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Sinduja <span class="chat_date">Nov 08</span></h5> 
+          <p>What are you doing with her in the coffee shop...?</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/2SsPGmX/avatar5edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>AB De Villiers <span class="chat_date">Nov 08</span></h5> 
+          <p> Just like you Virat is also like my brother.I have two brother from different blood....</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Kajal Agarwal <span class="chat_date">Nov 08</span></h5> 
+          <p>I was engaged on oct 30 with business tycoon.I forgot to tell you about it.. Sorry man....</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Prabhas <span class="chat_date">Nov 07</span></h5> 
+          <p>I am at Radhe Shyam shooting when you called me. What's the matter..?.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Chandini Chowdary<span class="chat_date">Nov 07</span></h5> 
+          <p>Suhas is also a shy guy just like you Badri..In the shooting of movie he dodn't even look at me.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Mahesh Babu <span class="chat_date">Nov 07</span></h5> 
+          <p>Heyy, I got an offer in the Rajamouli film which will start from Dec,2020 onwards..</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Nina Dobrev <span class="chat_date">Nov 07</span></h5> 
+          <p>Iam coming to india in the next meet to meet you. Send me your address..!.</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/2SsPGmX/avatar5edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>James Bond <span class="chat_date">Nov 07</span></h5> 
+          <p>Have you watched my latest movie No Time To Die.It came out really good....</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/myVMv28/avatar8edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Suhas <span class="chat_date">Nov 06</span></h5> 
+          <p>Areyy entraa Idhii...Chaala fast ga unnav entraa...Ila ithe ela raa ...</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Sruthi <span class="chat_date">Nov 06</span></h5> 
+          <p>Iam at Valley road. Will reach home by evening. don't worry..</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/GdFxwFK/avatar4edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Hema Sri <span class="chat_date">Nov 06</span></h5> 
+          <p>Maa palli kooda mee ooru pakkane. Chaala sepu kooda pattadhu..Kaluddham le eppudanna...</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="chat_list"> 
+        <div class="chat_people"> 
+         <div class="chat_img"> 
+          <img src="https://i.ibb.co/SwnqqYY/avatar2edit.jpg" alt="user"> 
+         </div> 
+         <div class="chat_ib"> 
+          <h5>Aajam <span class="chat_date">Nov 05</span></h5> 
+          <p>Come to School. let's play cricket. All of us are waiting here for you.</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="mesgs"> 
+      <div class="msg_history"> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <div class=" card"> 
+           <h6>Vaishanavi Chaitanya</h6> 
+          </div> 
+          <div class="card1"> 
+           <span> Last Seen 11:01 AM | Nov 9</span> 
+          </div>
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>Heyy Hi waasup..!</p> 
+         <span class="time_date"> 11:01 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>Hii, How are you??</p> 
+          <span class="time_date"> 11:01 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>Iam Ok what abou you?</p> 
+         <span class="time_date"> 11:02 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>Long time no see..What are you doing now..Anything like past or you into something....</p> 
+          <span class="time_date"> 11:03 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>I.. i just joined in Google as project manager.Whenare you coming to Hyd?</p> 
+         <span class="time_date"> 11:03 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>That's a good news. Congratulations.. Where's the party.I will come in 3 days... Let's roam around...</p> 
+          <span class="time_date"> 11:04 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>3 days....! Come tomorrow I want to say you something...</p> 
+         <span class="time_date"> 11:04 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>Ok..Tell me what's the matter.Are you in love with someone??</p> 
+          <span class="time_date"> 11:05 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>How do you know?</p> 
+         <span class="time_date"> 11:05 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>Tell me who she is I want to know about her...</p> 
+          <span class="time_date"> 11:05 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>Not now..Come and meet me in person then I will tell you about her...</p> 
+         <span class="time_date"> 11:06 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>Tell me now Otherwise I don't talk </p> 
+          <span class="time_date"> 11:06 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>Ok ok I will but what do you do after I told you??</p> 
+         <span class="time_date"> 11:07 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>I just want to know that's it...</p> 
+          <span class="time_date"> 11:07 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>What if I tell you that it was you??</p> 
+         <span class="time_date"> 11:08 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>You are joking right....</p> 
+          <span class="time_date"> 11:08 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>Actually I didn't. It was you...</p> 
+         <span class="time_date"> 11:09 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>Oops..I need some time...</p> 
+          <span class="time_date"> 11:10 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>How much..? 1 hour is enough right</p> 
+         <span class="time_date"> 11:10 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>1 hour! you are crazy as always</p> 
+          <span class="time_date"> 11:11 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="outgoing_msg"> 
+        <div class="sent_msg"> 
+         <p>I know that...Ok think about it and tell me whenever you want...</p> 
+         <span class="time_date"> 11:12 AM | Yesterday</span> 
+        </div> 
+       </div> 
+       <div class="incoming_msg"> 
+        <div class="incoming_msg_img"> 
+         <img src="https://i.ibb.co/yFvxt8Z/avatar1edit.jpg" alt="user"> 
+        </div> 
+        <div class="received_msg"> 
+         <div class="received_withd_msg"> 
+          <p>Ok..Bye</p> 
+          <span class="time_date"> 11:13 AM | Yesterday</span> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="type_msg"> 
+      <div class="input_msg_write"> 
+       <input type="text" class="write_msg" placeholder="Type a message"> 
+       <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="copyright">
+    © Facebook 2020 by SaahoBadri 
+  </div> 
+ </body>
+</html>
